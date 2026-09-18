@@ -46,18 +46,18 @@ Implementação completa e modernizada em **Java 21**
 
 ```text
 teste-iniflex/
-├── .mvn/wrapper/              # Configurações do Maven Wrapper
+├── .mvn/wrapper/ 
 ├── src/
 │   ├── main/java/iniflex/
-│   │   ├── Pessoa.java        # Modelo base de Pessoa
-│   │   ├── Funcionario.java   # Modelo Funcionario estendendo Pessoa
-│   │   └── Principal.java     # Fluxo principal e lógica de negócio
+│   │   ├── Pessoa.java   
+│   │   ├── Funcionario.java  
+│   │   └── Principal.java 
 │   └── test/java/iniflex/
-│       └── PrincipalTest.java # 11 testes unitários cobrindo todos os requisitos
-├── mvnw                       # Script Maven Wrapper para Unix/Linux/macOS
-├── mvnw.cmd                   # Script Maven Wrapper para Windows
-├── pom.xml                    # Configurações do projeto e dependências Maven
-└── README.md                  # Documentação do projeto
+│       └── PrincipalTest.java 
+├── mvnw                     
+├── mvnw.cmd                 
+├── pom.xml               
+└── README.md   
 ```
 
 ---
