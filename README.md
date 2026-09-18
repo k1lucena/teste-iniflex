@@ -1,10 +1,10 @@
-# Teste Prático de Programação - Iniflex
+# Teste Prático
 
-Implementação completa e modernizada em **Java 21 (LTS)** para o processo de avaliação técnica da Iniflex.
+Implementação completa e modernizada em **Java 21**
 
 ---
 
-## 📋 Tabela de Funcionários da Indústria
+## Tabela de Funcionários da Indústria
 
 | Nome | Data Nascimento | Salário | Função |
 | :--- | :---: | :---: | :--- |
@@ -21,7 +21,7 @@ Implementação completa e modernizada em **Java 21 (LTS)** para o processo de a
 
 ---
 
-## 🎯 Requisitos Atendidos
+## Requisitos Atendidos
 
 - **1.** **Classe `Pessoa`**: atributos `nome` (`String`) e `dataNascimento` (`LocalDate`), encapsulamento e validações de não-nulidade.
 - **2.** **Classe `Funcionario`**: estende `Pessoa`, com atributos `salario` (`BigDecimal`) e `funcao` (`String`). Implementa `Comparable<Funcionario>` e formatações no padrão brasileiro.
@@ -42,44 +42,56 @@ Implementação completa e modernizada em **Java 21 (LTS)** para o processo de a
 
 ---
 
-## 🛠️ Tecnologias e Decisões de Arquitetura
+## Estrutura do Projeto
 
-- **Java 21 (LTS)**: Utilização de recursos modernos da linguagem, incluindo métodos de fábrica `Locale.of("pt", "BR")` (evitando APIs depreciadas).
-- **`BigDecimal` & `RoundingMode.HALF_UP`**: Precisão monetária sem perdas de ponto flutuante binário.
-- **Thread-Safety na Formatação**: Formatação com `String.format(Locale.of("pt", "BR"), ...)` eliminando instâncias estáticas mutáveis inseguras.
-- **Java Streams & Collections API**: Agrupamento eficiente via `Collectors.groupingBy` e filtragens idiomáticas.
-- **JUnit 5**: Suíte de testes unitários automatizados validando 100% dos requisitos.
-- **Maven Wrapper (`mvnw` / `mvnw.cmd`)**: Build reprodutível sem dependência de instalação prévia do Maven.
+```text
+teste-iniflex/
+├── .mvn/wrapper/              # Configurações do Maven Wrapper
+├── src/
+│   ├── main/java/iniflex/
+│   │   ├── Pessoa.java        # Modelo base de Pessoa
+│   │   ├── Funcionario.java   # Modelo Funcionario estendendo Pessoa
+│   │   └── Principal.java     # Fluxo principal e lógica de negócio
+│   └── test/java/iniflex/
+│       └── PrincipalTest.java # 11 testes unitários cobrindo todos os requisitos
+├── mvnw                       # Script Maven Wrapper para Unix/Linux/macOS
+├── mvnw.cmd                   # Script Maven Wrapper para Windows
+├── pom.xml                    # Configurações do projeto e dependências Maven
+└── README.md                  # Documentação do projeto
+```
 
 ---
 
-## 🚀 Como Executar
+## Tecnologias
+
+- **Java 21**
+- **JUnit 5**
+- **Maven**
+
+---
+
+## Como Executar
 
 ### Pré-requisitos
-- JDK 21 instalado e configurado no ambiente.
+- **Java JDK 21**
 
-### Opção 1: Via Maven Wrapper (Recomendado)
+---
 
-**No Windows (PowerShell / CMD):**
-```powershell
-# Executar todos os testes unitários
-.\mvnw.cmd clean test
+### Opção 1: Via Maven
+
+```
+# Executar os testes unitários
+mvn clean test
 
 # Executar a classe Principal
-.\mvnw.cmd exec:java
+mvn exec:java
 ```
 
-**No Linux / macOS:**
-```bash
-# Executar todos os testes unitários
-./mvnw clean test
+---
 
-# Executar a classe Principal
-./mvnw exec:java
-```
+### Opção 2: Via IDE
 
-### Opção 2: Via IDE (IntelliJ IDEA / Eclipse / VS Code)
-Basta abrir o projeto na IDE e executar o método `main()` da classe:
-`src/main/java/br/com/iniflex/Principal.java`
-E para rodar os testes:
-`src/test/java/br/com/iniflex/PrincipalTest.java`
+1. Abra a pasta raiz do projeto na sua IDE favorita como um projeto Maven.
+2. Aguarde a importação das dependências.
+3. Para rodar a aplicação: abra o arquivo `src/main/java/iniflex/Principal.java` e execute o método `main()`.
+4. Para rodar os testes: abra `src/test/java/iniflex/PrincipalTest.java` e execute a classe de testes.
