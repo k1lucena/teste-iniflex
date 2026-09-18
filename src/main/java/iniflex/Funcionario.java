@@ -73,6 +73,6 @@ public class Funcionario extends Pessoa implements Comparable<Funcionario> {
 
     @Override
     public int compareTo(Funcionario o) {
-        return 0;
+        return this.getNome().compareToIgnoreCase(o.getNome());
     }
 }
