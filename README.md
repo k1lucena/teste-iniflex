@@ -91,7 +91,5 @@ mvn exec:java
 
 ### Opção 2: Via IDE
 
-1. Abra a pasta raiz do projeto na sua IDE favorita como um projeto Maven.
-2. Aguarde a importação das dependências.
-3. Para rodar a aplicação: abra o arquivo `src/main/java/iniflex/Principal.java` e execute o método `main()`.
-4. Para rodar os testes: abra `src/test/java/iniflex/PrincipalTest.java` e execute a classe de testes.
+1. Para rodar a aplicação: abra o arquivo `src/main/java/iniflex/Principal.java` e execute o método `main()`.
+2. Para rodar os testes: abra `src/test/java/iniflex/PrincipalTest.java` e execute a classe de testes.
